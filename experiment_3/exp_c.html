@@ -1,56 +1,25 @@
-<!-- Experiment 3: HTML5 Semantic Tags and CSS Types, Question: exp_c -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Exp 3c: CSS Types</title>
-    
-    <!-- 3. External Style: Linked via the <link> tag. Great for sharing styles across multiple pages. -->
+    <title>Experiment 3c - Types of CSS</title>
     <link rel="stylesheet" href="exp_c.css">
-
-    <!-- 2. Internal Style: Placed within a <style> block in the <head>. Good for page-specific styles. -->
     <style>
-        /* Selector: .internal-styled-box
-           Property: background-color, border, padding, margin, border-radius
-           Value: #e0f7fa, 2px solid #00acc1, 20px, 10px 0, 5px */
-        .internal-styled-box {
-            background-color: #e0f7fa;
-            border: 2px solid #00acc1;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
+        /* selector: .internal, property: color, value: blue */
+        .internal { color: blue; }
     </style>
 </head>
 <body>
-    <div style="position:fixed; top:8px; left:8px; background:#f2f2f2; border:1px solid #999; padding:6px 10px; font-family:Arial, sans-serif; font-size:13px; z-index:9999; border-radius:4px;">
-      <strong>K H N V Phani Kumar</strong><br>
-      Reg No: 24K61A1259
-    </div>
+    <p>K H N V Phani Kumar<br>24K61A1259</p>
 
-    <div style="padding-top: 50px;">
-        <h1>CSS Types Demonstration</h1>
+    <h1>Types of CSS</h1>
 
-        <!-- 1. Inline Style: Applied directly using the style="" attribute. 
-             Selector: N/A (applied directly to element)
-             Property: background-color, border, padding, margin, border-radius
-             Value: #fff9c4, 2px solid #fbc02d, 20px, 10px 0, 5px -->
-        <div style="background-color: #fff9c4; border: 2px solid #fbc02d; padding: 20px; margin: 10px 0; border-radius: 5px;">
-            <h2>1. Inline Style</h2>
-            <p>This box is styled using an inline <code>style="..."</code> attribute directly on the element.</p>
-        </div>
+    <!-- inline: selector: p, property: color, value: red -->
+    <p style="color: red;">This is an inline style.</p>
 
-        <!-- 2. Internal Style -->
-        <div class="internal-styled-box">
-            <h2>2. Internal Style</h2>
-            <p>This box is styled using a <code>&lt;style&gt;</code> block located in the <code>&lt;head&gt;</code> of this HTML document.</p>
-        </div>
+    <!-- internal: selector: .internal, property: color, value: blue -->
+    <p class="internal">This is an internal style.</p>
 
-        <!-- 3. External Style -->
-        <div class="external-styled-box">
-            <h2>3. External Style</h2>
-            <p>This box is styled using an external CSS file (<code>exp_c.css</code>) linked via the <code>&lt;link&gt;</code> tag.</p>
-        </div>
-    </div>
+    <!-- external: selector: .external, property: color, value: green -->
+    <p class="external">This is an external style.</p>
 </body>
 </html>

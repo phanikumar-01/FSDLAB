@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Output Methods</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; padding-top: 60px; line-height: 1.6; }
-        h1 { color: #333; }
-        .output { background: #f9f9f9; padding: 15px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px; }
-        table { border-collapse: collapse; width: 50%; margin-top: 15px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-    </style>
+    <title>Experiment 6b - JavaScript Output Methods</title>
 </head>
 <body>
-<div style="position:fixed; top:8px; left:8px; background:#f2f2f2; border:1px solid #999; padding:6px 10px; font-family:Arial, sans-serif; font-size:13px; z-index:9999; border-radius:4px;">
-  <strong>K H N V Phani Kumar</strong><br>
-  Reg No: 24K61A1259
-</div>
-    <!-- Experiment 6b: Display Output in JS -->
+    <p>K H N V Phani Kumar<br>24K61A1259</p>
+
     <h1>JavaScript Output Methods</h1>
-    <p>Demonstrating different ways to display output in JS.</p>
-    <div id="output" class="output"></div>
+    <p id="out"></p>
+
     <script>
-        // 1. console.log
-        console.log("Output via console.log()");
-        
-        // 2. alert
-        alert("Output via alert()");
-        
-        // 3. innerHTML
-        document.getElementById("output").innerHTML = "Output via <b>innerHTML</b>";
-        
-        // 4. document.write
-        document.write("<p>Output via <b>document.write()</b></p>");
+        document.write("This is document.write()<br>");
+        console.log("This is console.log()");
+        alert("This is alert()");
+        document.getElementById("out").innerHTML = "This is innerHTML";
     </script>
 </body>
 </html>

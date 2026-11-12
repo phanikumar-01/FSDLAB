@@ -1,44 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String Object Methods</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; padding-top: 60px; line-height: 1.6; }
-        h1 { color: #333; }
-        .output { background: #f9f9f9; padding: 15px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px; }
-        table { border-collapse: collapse; width: 50%; margin-top: 15px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-    </style>
+    <title>Experiment 7e - String Object</title>
 </head>
 <body>
-<div style="position:fixed; top:8px; left:8px; background:#f2f2f2; border:1px solid #999; padding:6px 10px; font-family:Arial, sans-serif; font-size:13px; z-index:9999; border-radius:4px;">
-  <strong>K H N V Phani Kumar</strong><br>
-  Reg No: 24K61A1259
-</div>
-    <!-- Experiment 7e: String Object -->
-    <h1>String Object Methods</h1>
-    <div id="output" class="output"></div>
+    <p>K H N V Phani Kumar<br>24K61A1259</p>
+
+    <h1>String Object</h1>
+    <p id="out"></p>
+
     <script>
-        let str = "  Hello Web Technologies  ";
-        let out = document.getElementById("output");
-        
-        let html = "<ul>";
-        html += "<li><b>Original String:</b> '" + str + "'</li>";
-        html += "<li><b>Length:</b> " + str.length + "</li>";
-        html += "<li><b>trim():</b> '" + str.trim() + "'</li>";
-        
-        let trimmed = str.trim();
-        html += "<li><b>toUpperCase():</b> " + trimmed.toUpperCase() + "</li>";
-        html += "<li><b>toLowerCase():</b> " + trimmed.toLowerCase() + "</li>";
-        html += "<li><b>substring(0, 5):</b> " + trimmed.substring(0, 5) + "</li>";
-        html += "<li><b>indexOf('Web'):</b> " + trimmed.indexOf("Web") + "</li>";
-        html += "<li><b>split(' '):</b> [" + trimmed.split(" ").join(", ") + "]</li>";
-        html += "</ul>";
-        
-        out.innerHTML = html;
+        let text = "Hello Web Technologies";
+        let out = document.getElementById("out");
+
+        out.innerHTML = "String: " + text + "<br>";
+        out.innerHTML += "Length: " + text.length + "<br>";
+        out.innerHTML += "Uppercase: " + text.toUpperCase() + "<br>";
+        out.innerHTML += "Lowercase: " + text.toLowerCase() + "<br>";
+        out.innerHTML += "indexOf('Web'): " + text.indexOf("Web");
     </script>
 </body>
 </html>

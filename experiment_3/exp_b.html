@@ -1,42 +1,23 @@
-<!-- Experiment 3: HTML5 Semantic Tags and CSS Types, Question: exp_b -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Exp 3b: Audio and Video</title>
-    <style>
-        body { font-family: sans-serif; padding: 60px 20px 20px; }
-        .media-container { margin-bottom: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; }
-    </style>
+    <title>Experiment 3b - Audio and Video</title>
 </head>
 <body>
-    <div style="position:fixed; top:8px; left:8px; background:#f2f2f2; border:1px solid #999; padding:6px 10px; font-family:Arial, sans-serif; font-size:13px; z-index:9999; border-radius:4px;">
-      <strong>K H N V Phani Kumar</strong><br>
-      Reg No: 24K61A1259
-    </div>
+    <p>K H N V Phani Kumar<br>24K61A1259</p>
 
-    <h1>Audio and Video Embedding</h1>
+    <h1>Audio and Video</h1>
 
-    <div class="media-container">
-        <h2>Audio Example</h2>
-        <p>Using the <code>&lt;audio&gt;</code> element.</p>
-        <!-- audio: Used to embed sound content in documents. Controls attribute adds play/pause/volume -->
-        <!-- Replace assets/sample-audio.mp3 with your own audio file -->
-        <audio controls>
-            <source src="assets/sample-audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="assets/sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
 
-    <div class="media-container">
-        <h2>Video Example</h2>
-        <p>Using the <code>&lt;video&gt;</code> element.</p>
-        <!-- video: Used to embed video content in a document. Controls attribute adds playback controls -->
-        <!-- Replace assets/sample-video.mp4 with your own video file -->
-        <video width="320" height="240" controls>
-            <source src="assets/sample-video.mp4" type="video/mp4">
-            Your browser does not support the video element.
-        </video>
-    </div>
+    <h2>Video</h2>
+    <video width="320" height="240" controls>
+        <source src="assets/sample-video.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
 </body>
 </html>

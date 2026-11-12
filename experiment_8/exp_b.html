@@ -1,57 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment 8B - Weekday Name</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 60px 20px 20px; line-height: 1.6; }
-        .container { max-width: 400px; margin: 0 auto; background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="number"] { width: 100%; padding: 8px; box-sizing: border-box; }
-        button { padding: 10px 15px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #218838; }
-        #result { margin-top: 20px; font-size: 1.2em; font-weight: bold; color: #333; }
-    </style>
+    <title>Experiment 8b - Days of the Week</title>
 </head>
 <body>
-<div style="position:fixed; top:8px; left:8px; background:#f2f2f2; border:1px solid #999; padding:6px 10px; font-family:Arial, sans-serif; font-size:13px; z-index:9999; border-radius:4px;">
-  <strong>K H N V Phani Kumar</strong><br>
-  Reg No: 24K61A1259
-</div>
+    <p>K H N V Phani Kumar<br>24K61A1259</p>
 
-<!-- Experiment 8b: Display weekday names using switch -->
-<div class="container">
-    <h2>Find Weekday</h2>
-    <div class="form-group">
-        <label for="dayNum">Enter a number (1-7):</label>
-        <input type="number" id="dayNum" min="1" max="7" placeholder="e.g. 1 for Sunday">
-    </div>
-    <button onclick="showWeekday()">Show Day</button>
+    <h1>Days of the Week</h1>
+    <button onclick="showDay()">Enter Day Number</button>
 
-    <div id="result"></div>
-</div>
+    <script>
+        function showDay() {
+            let day = Number(prompt("Enter a number from 1 to 7"));
 
-<script>
-    function showWeekday() {
-        var day = parseInt(document.getElementById('dayNum').value);
-        var resultDiv = document.getElementById('result');
-        var dayName = "";
-
-        switch(day) {
-            case 1: dayName = "Sunday"; break;
-            case 2: dayName = "Monday"; break;
-            case 3: dayName = "Tuesday"; break;
-            case 4: dayName = "Wednesday"; break;
-            case 5: dayName = "Thursday"; break;
-            case 6: dayName = "Friday"; break;
-            case 7: dayName = "Saturday"; break;
-            default: dayName = "<span style='color:red;'>Invalid input! Please enter a number between 1 and 7.</span>";
+            switch (day) {
+                case 1: alert("Sunday"); break;
+                case 2: alert("Monday"); break;
+                case 3: alert("Tuesday"); break;
+                case 4: alert("Wednesday"); break;
+                case 5: alert("Thursday"); break;
+                case 6: alert("Friday"); break;
+                case 7: alert("Saturday"); break;
+                default: alert("Invalid day");
+            }
         }
-
-        resultDiv.innerHTML = dayName;
-    }
-</script>
+    </script>
 </body>
 </html>

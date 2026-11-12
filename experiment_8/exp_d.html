@@ -1,68 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment 8D - Object Iteration Loops</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 60px 20px 20px; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; display: flex; gap: 20px; }
-        .section { flex: 1; background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd; }
-        h3 { margin-top: 0; color: #17a2b8; }
-        .output { background: #fff; padding: 10px; border: 1px solid #ccc; min-height: 150px; }
-    </style>
+    <title>Experiment 8d - Object Loops</title>
 </head>
 <body>
-<div style="position:fixed; top:8px; left:8px; background:#f2f2f2; border:1px solid #999; padding:6px 10px; font-family:Arial, sans-serif; font-size:13px; z-index:9999; border-radius:4px;">
-  <strong>K H N V Phani Kumar</strong><br>
-  Reg No: 24K61A1259
-</div>
+    <p>K H N V Phani Kumar<br>24K61A1259</p>
 
-<!-- Experiment 8d: Print data from JS object three ways -->
-<h2 style="text-align: center;">Iterate Over Object Data</h2>
-<div class="container">
-    <div class="section">
-        <h3>for-in Loop</h3>
-        <div id="forInOutput" class="output"></div>
-    </div>
-    <div class="section">
-        <h3>forEach Loop</h3>
-        <div id="forEachOutput" class="output"></div>
-    </div>
-    <div class="section">
-        <h3>for-of Loop</h3>
-        <div id="forOfOutput" class="output"></div>
-    </div>
-</div>
+    <h1>Object Loops</h1>
 
-<script>
-    const student = {
-        name: "Phani Kumar",
-        regNo: "24K61A1259",
-        course: "Web Technologies",
-        grade: "A"
-    };
+    <h3>for-in</h3>
+    <p id="forin"></p>
 
-    // 1. for-in loop (iterates over keys of an object)
-    let forInStr = "";
-    for (let key in student) {
-        forInStr += `<b>${key}</b>: ${student[key]}<br>`;
-    }
-    document.getElementById('forInOutput').innerHTML = forInStr;
+    <h3>forEach</h3>
+    <p id="foreach"></p>
 
-    // 2. forEach loop (iterates over an array, so we use Object.entries)
-    let forEachStr = "";
-    Object.entries(student).forEach(function([key, value]) {
-        forEachStr += `<b>${key}</b>: ${value}<br>`;
-    });
-    document.getElementById('forEachOutput').innerHTML = forEachStr;
+    <h3>for-of</h3>
+    <p id="forof"></p>
 
-    // 3. for-of loop (iterates over iterables, we use Object.entries)
-    let forOfStr = "";
-    for (let [key, value] of Object.entries(student)) {
-        forOfStr += `<b>${key}</b>: ${value}<br>`;
-    }
-    document.getElementById('forOfOutput').innerHTML = forOfStr;
-</script>
+    <script>
+        let student = {
+            name: "Phani Kumar",
+            rollNo: "24K61A1259",
+            course: "Web Technologies"
+        };
+
+        let forInText = "";
+        for (let key in student) {
+            forInText += key + ": " + student[key] + "<br>";
+        }
+        document.getElementById("forin").innerHTML = forInText;
+
+        let forEachText = "";
+        Object.keys(student).forEach(function (key) {
+            forEachText += key + ": " + student[key] + "<br>";
+        });
+        document.getElementById("foreach").innerHTML = forEachText;
+
+        let forOfText = "";
+        for (let key of Object.keys(student)) {
+            forOfText += key + ": " + student[key] + "<br>";
+        }
+        document.getElementById("forof").innerHTML = forOfText;
+    </script>
 </body>
 </html>
